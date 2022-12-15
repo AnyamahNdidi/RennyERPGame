@@ -1,0 +1,66 @@
+const mongoose = require("mongoose");
+
+
+const companySchema = mongoose.Schema({
+    name:{
+        type:String,
+        unique:true
+    },
+    companyToken:{
+        type:String,
+    },
+    status:{
+        type:String,
+    },
+    email:{
+        type:String,
+        unique:true
+    },
+    vision:{
+        type:String,
+    },
+    password:{
+        type:String,
+    },
+    logo:{
+        type:String,
+    },
+    verifiedToken:{
+        type:String,
+    },
+    verified: {
+        type: Boolean,
+      },
+
+    staff:[
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref:"staffs"
+        }
+    ],
+
+    hub:[
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref:"hubs"
+        }
+    ],
+
+    history:[
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref:"reportHistories"
+        }
+    ],
+
+    salesRecord:[
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref:"salesRecord"
+        }
+    ]
+},
+{timmestamps:true}
+)
+
+module.exports = mongoose.model("companies", companySchema)

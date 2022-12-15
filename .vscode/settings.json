@@ -1,0 +1,8 @@
+{
+    "prettier.bracketSameLine": true,
+    "prettier.jsxSingleQuote": true,
+    "prettier.trailingComma": "all",
+    "prettier.useTabs": true,
+    "powermode.enabled": true,
+    "powermode.presets": "exploding-rift"
+}
